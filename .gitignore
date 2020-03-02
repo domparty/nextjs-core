@@ -1,0 +1,17 @@
+# Dependency managers
+node_modules/
+npm-debug.log
+
+# Editor specific
+.idea
+.vscode
+
+# General files
+*~
+*.DS_STORE
+
+# Logs
+*.log
+
+# Dist
+debug/.next
