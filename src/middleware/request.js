@@ -5,7 +5,7 @@
  * @param res
  * @param next
  */
-module.exports = request = (req, res, next) => {
+module.exports = (req, res, next) => {
   global.log.trace(`[EXPRESS][REQUEST](${req.method}): ${req.originalUrl}`);
   next();
 };

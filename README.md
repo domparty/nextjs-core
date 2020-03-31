@@ -2,7 +2,7 @@
 
 A custom Next.JS implementation with some nice extra's
 
-![Node.js CI Test](https://github.com/domparty/nextjs-core/workflows/Node.js%20CI%20Test/badge.svg?branch=master)
+[![Tests](https://github.com/domparty/nextjs-core/workflows/Tests/badge.svg?branch=master)](https://github.com/domparty/nextjs-core/actions?query=workflow%3ATests)
 
 # TODO
 Add some docs here
