@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "$schema": {
+      "description": "JSON Schema URL",
+      "type": "string"
+    },
+    "application": {
+      "description": "Base application config",
+      "type": "object",
+      "properties": {
+        "host": {
+          "description": "Express.JS server host",
+          "type": "string",
+          "default": "0.0.0.0"
+        },
+        "port": {
+          "description": "Express.JS server port",
+          "type": "integer",
+          "default": 5678
+        },
+        "dompartyHeaders": {
+          "description": "Enables/disables the DOMParty X headers",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "logger": {
+      "description": "Application Log settings",
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Defines log file location",
+          "default": "./log"
+        },
+        "filename": {
+          "type": "string",
+          "description": "Defines log file name",
+          "default": "app.log"
+        },
+        "level": {
+          "type": "string",
+          "description": "Defines log level",
+          "default": "trace",
+          "enum": [
+            "trace",
+            "debug",
+            "info",
+            "warn",
+            "error",
+            "fatal"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "pwa": {
+      "description": "Application PWA settings",
+      "type": "object",
+      "properties": {
+        "shortName": {
+          "type": "string",
+          "description": "Project name (Not longer then 12 characters)",
+          "default": "Project"
+        },
+        "name": {
+          "type": "string",
+          "description": "Project name",
+          "default": "DOMParty Project"
+        },
+        "version": {
+          "description": "PWA application version",
+          "type": "string",
+          "default": "v0.0.0"
+        },
+        "backgroundColor": {
+          "type": "string",
+          "description": "PWA Background color",
+          "default": "#000000"
+        },
+        "themeColor": {
+          "type": "string",
+          "description": "PWA Theme color",
+          "default": "#000000"
+        }
+      },
+      "additionalProperties": false
+    },
+    "cli": {
+      "description": "Defines the application CLI config",
+      "type": "object",
+      "properties": {
+        "maxExecutionTimeout": {
+          "description": "Defines the CLI max execution time. If a task didn't finish after this time the process will terminate (In seconds)",
+          "type": "integer",
+          "default": 30
+        }
+      },
+      "additionalProperties": false
+    },
+    "graphql": {
+      "description": "Defines the application GraphQL config",
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "description": "Enables/disables the GraphQL API",
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "robots": {
+      "description": "Defines the application robots.txt config",
+      "type": "object",
+      "properties": {
+        "disallowAll": {
+          "description": "Enables/disables the robots disallow all string",
+          "type": "boolean",
+          "default": true
+        },
+        "disallowRules": {
+          "description": "Defines disallow rules for robots",
+          "type": "array",
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    },
+    "sitemap": {
+      "description": "Defines the application sitemap.xml config",
+      "type": "object",
+      "properties": {
+        "urls": {
+          "description": "Defines the sitemap urls",
+          "type": "array",
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
