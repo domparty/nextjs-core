@@ -3,7 +3,7 @@
  *
  * @param config
  */
-module.exports = pwa = (config) => {
+module.exports = (config) => {
   return (req, res, next) => {
     if (req.originalUrl === "/manifest.json") {
       res.json({

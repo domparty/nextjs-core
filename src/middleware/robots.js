@@ -4,7 +4,7 @@
  * @param options
  * @return {Function}
  */
-module.exports = robots = options => {
+module.exports = options => {
   /**
    * Return the express middleware
    */

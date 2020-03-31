@@ -3,7 +3,7 @@
  *
  * @param core
  */
-module.exports = headers = (core) => {
+module.exports = (core) => {
   /**
    * Return the middleware
    */

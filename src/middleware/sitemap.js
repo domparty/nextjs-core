@@ -9,7 +9,7 @@ const {createSitemap} = require('sitemap');
  * @param options
  * @return {Function}
  */
-module.exports = sitemap = options => {
+module.exports = options => {
   let urls = [
     {
       url: '/',

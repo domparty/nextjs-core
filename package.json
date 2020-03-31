@@ -14,8 +14,9 @@
     "test": "NODE_ENV=test NODE_TEST=true mocha -R spec --recursive './{,!(node_modules)/**}/*.test.js'",
     "posttest": "npm run cleanup",
     "prestart": "NODE_ENV=production next build ./debug",
-    "start": "cd debug && NODE_ENV=test node ./server.js",
-    "cleanup": "rm -rf ./debug/.next && rm -rf ./debug/log"
+    "start": "npm run lint && cd debug && NODE_ENV=test node ./server.js",
+    "cleanup": "rm -rf ./debug/.next && rm -rf ./debug/log",
+    "lint": "eslint ./src"
   },
   "engines": {
     "node": "^8.0.0"
@@ -24,6 +25,21 @@
     "type": "git",
     "url": "https://github.com/domparty/nextjs-core.git"
   },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 9
+    },
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "react/prop-types": 0
+    }
+  },
+  "eslintIgnore": [
+    ".next"
+  ],
   "dependencies": {
     "body-parser": "^1.19.0",
     "deepmerge": "^4.0.0",
@@ -39,6 +55,7 @@
     "sitemap": "^5.0.0"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
     "mocha": "^7.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
