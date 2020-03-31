@@ -134,7 +134,7 @@ class Core extends Express {
      * Create Next.JS app
      */
     const handler = instantListen(async () => {
-      const nextDir = process.env.NODE_ENV === "test" ? this.dirname : this.dirname + '/../frontend';
+      const nextDir = process.env.NODE_ENV === "test" ? this.dirname : this.dirname + this.config.next.pagesDir;
       const nextDev = process.env.NODE_ENV === "test" ? false : this._dev;
       const app = next({dev: nextDev, dir: nextDir, conf: this.nextBaseConfig});
 

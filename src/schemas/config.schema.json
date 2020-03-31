@@ -26,6 +26,17 @@
         }
       }
     },
+    "next": {
+      "description": "Next.JS config",
+      "type": "object",
+      "properties": {
+        "pagesDir": {
+          "description": "The Next.JS pages directory location",
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
     "logger": {
       "description": "Application Log settings",
       "type": "object",

@@ -24,6 +24,9 @@ const baseConfig = {
     port: 5678,
     dompartyHeaders: true
   },
+  next: {
+    pagesDir: ""
+  },
   logger: {
     location: './log',
     filename: 'app.log',
