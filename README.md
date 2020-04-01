@@ -27,13 +27,13 @@ Setting up the Core is simple and only requires 2 files, 2 folders and an npm in
 - Run `npm i --save @domparty/nextjs-core react react-dom` inside your project
 - Create the following folder structure `src/pages`
 - Create the following file `src/server.js` with the following content:
-```
+```javascript
 const App = require('@domparty/nextjs-core');
 const core = new App(__dirname, process.cwd());
 core.init();
 ```
 - Create the following file `src/pages/index.js` with the following content:
-```
+```javascript
 import React from 'react';
 
 function Home() {
@@ -58,6 +58,30 @@ https://github.com/domparty/nextjs-core-example
 ### Config
 
 ### Logger
+After a `new` core has been constructed a global variable will be available that contains the logger.
+
+Using the following functions you are able to log messages to the console and log file.
+Depending on the log level inside the config these messages will be printed to the console.
+```javascript
+global.log.trace('');
+global.log.debug('');
+global.log.info('');
+global.log.warn('');
+global.log.error('');
+global.log.fatal('');
+```
+
+#### Log Level
+The application default log level is set to `trace`.
+
+You can change the log level by adding the following block to your config file:
+```json
+{
+  "logger": {
+    "level": "trace"
+  }
+}
+```
 
 ### CLI
 
