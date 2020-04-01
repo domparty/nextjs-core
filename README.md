@@ -85,6 +85,8 @@ You can change the log level by adding the following block to your config file:
 
 ### CLI
 
+### Using Preact
+
 ### Express.JS
 
 #### Instant Listen (Next.JS)
