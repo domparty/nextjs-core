@@ -2,7 +2,7 @@
 
 A custom Next.JS implementation with some nice extra's
 
-[![Tests](https://github.com/domparty/nextjs-core/workflows/Tests/badge.svg?branch=master)](https://github.com/domparty/nextjs-core/actions?query=workflow%3ATests)
+[![npm](https://img.shields.io/npm/v/@domparty/nextjs-core.svg)](https://www.npmjs.com/package/@domparty/nextjs-core) ![node](https://img.shields.io/node/v/@domparty/nextjs-core.svg) [![Tests](https://github.com/domparty/nextjs-core/workflows/Tests/badge.svg?branch=master)](https://github.com/domparty/nextjs-core/actions?query=workflow%3ATests)
 
 ## Structure
 - Next.JS

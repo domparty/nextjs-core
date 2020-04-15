@@ -19,7 +19,7 @@
     "lint": "eslint ./src"
   },
   "engines": {
-    "node": "^8.0.0"
+    "node": "^10.0.0"
   },
   "repository": {
     "type": "git",
@@ -45,12 +45,12 @@
     "deepmerge": "^4.0.0",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
-    "graphql": "^14.5.4",
-    "graphql-compose": "^7.14.0",
-    "graphql-playground-middleware-express": "^1.7.12",
+    "graphql": "^15.0.0",
+    "graphql-compose": "^7.14.1",
+    "graphql-playground-middleware-express": "^1.7.14",
     "instant-listen": "^0.1.0",
-    "jsonschema": "^1.2.5",
-    "next": "9.3.1",
+    "jsonschema": "^1.2.6",
+    "next": "^9.3.5",
     "simple-node-logger": "^18.12.24",
     "sitemap": "^5.0.0"
   },
